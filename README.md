@@ -24,3 +24,32 @@ This project analyzes five aluminum-based alloys: **Al 1050 (pure aluminum), Al 
 | **FNN** | SGD | ReLU | 0.01 | 0.0001 |
 | **VGG16** | Adam / SGD+Momentum | ReLU | 0.0002 | 0.0001 |
 | **EfficientNetB0** | RMSprop / Adam | Swish (SiLU) | 0.002 | 0.0001 |
+
+---
+
+## Model Performance Summary
+
+### Table 1: Comparative Summary of Average Precision (AP) by Alloy
+
+This table summarizes the **Average Precision (AP)** for object detection of different alloys across the four neural network architectures, extracted from the Precision-Recall curves.
+
+| Alloy | ResNet50 (AP) | ResNet18 (AP) | EfficientNetB0 (AP) | VGG16 (AP) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Al 1050** | **0.98** | **0.98** | 0.88 | 0.71 |
+| **Al 2017** | 0.93 | 0.89 | 0.72 | 0.69 |
+| **Al 5083** | 0.79 | 0.72 | 0.65 | 0.58 |
+| **Al 6082** | 0.78 | 0.74 | 0.68 | 0.56 |
+| **Al 7075** | 0.81 | 0.61 | 0.71 | 0.79 |
+
+### Table 2: Final Accuracy and Loss Metrics (After 100 Epochs)
+
+This table summarizes the final Training and Validation **Accuracy** and **Loss** metrics after 100 epochs, extracted from the learning curves (ResNet18 values are user-supplied).
+
+| Model | Final Train Acc | Final Val Acc | Final Train Loss | Final Val Loss |
+| :--- | :--- | :--- | :--- | :--- |
+| **ResNet50** | $\approx 0.99$ | $\approx 0.995$ | $\approx 0.10$ | $\approx 0.10$ |
+| **ResNet18** | $\approx 0.982$ | $\approx 0.975$ | $\approx 0.20$ | $\approx 0.20$ |
+| **EfficientNetB0** | $\approx 0.90$ | $\approx 0.92$ | $\approx 0.90$ | $\approx 0.15$ |
+| **VGG16** | $\approx 0.85$ | $\approx 0.80$ | $\approx 2.30$ | $\approx 1.70$ |
+
+---
